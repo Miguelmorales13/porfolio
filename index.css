@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#nprogress .bar {
+    background: #fff !important;
+}
+
+#nprogress .spinner-icon {
+    border-top-color: #fff !important;
+    border-left-color: #fff !important;
+}

@@ -26,7 +26,7 @@ exports[`Home page matches snapshot 1`] = `
         <code
           class="jsx-1276654382"
         >
-          pages/index.tsx
+          pages/contact.tsx
         </code>
       </p>
       <button
