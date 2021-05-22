@@ -39,7 +39,7 @@ export const items: ItemSlider[] = [
     category: 'Nodejs',
     content: (<ContentCard name='api-restaurantes' urlView='N/A' labels={['Socket.io', 'Swagger', 'Mongodb', 'Mongoose', 'JWT']} />)
   }, {
-    image: 'faker-generator.PNG',
+    image: 'faker-generator.png',
     title: 'Faker Generator',
     category: 'Vue',
     content: (<ContentCard name='fakerGenerator' urlView='N/A' labels={['Vue', 'Electron']} />)
