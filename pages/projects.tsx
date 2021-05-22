@@ -1,10 +1,10 @@
-import React, { FunctionComponent, useRef } from 'react'
+import React, { FunctionComponent, useContext, useRef } from 'react'
 import { Slider } from '../components/Slider'
 import { Box, makeStyles, Typography } from '@material-ui/core'
 import { Bounce, Power3, TweenMax } from 'gsap'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
-import { items } from '../contants/items'
+import ProjectsContext from '../contexts/ProjectsContext'
 
 interface OwnProps {
 }
@@ -29,7 +29,7 @@ const useStyles = makeStyles(theme => ({
 const projects: FunctionComponent<Props> = (props) => {
   const route = useRouter()
   const classes = useStyles()
-
+  const { filter } = useContext(ProjectsContext)
   const refs = {
     All: useRef(null),
     Angular: useRef(null),
@@ -80,7 +80,7 @@ const projects: FunctionComponent<Props> = (props) => {
           ))
         }
       </Box>
-      <Slider filter={route?.query['find']?.toString() ?? ''} items={items} />
+      <Slider items={filter(route?.query['find']?.toString() ?? '')} />
     </div>
   )
 }

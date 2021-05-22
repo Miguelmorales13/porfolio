@@ -1,6 +1,6 @@
 import { Box, Divider, makeStyles, Typography } from '@material-ui/core'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import React, { FunctionComponent, useMemo } from 'react'
+import React, { FunctionComponent } from 'react'
 import 'swiper/swiper.min.css'
 import 'swiper/components/effect-coverflow/effect-coverflow.min.css'
 import 'swiper/components/pagination/pagination.min.css'
@@ -77,20 +77,15 @@ export interface ItemSlider {
 
 interface OwnProps {
   items: ItemSlider[]
-  filter?: string
 }
 
 type Props = OwnProps;
 
 
-export const Slider: FunctionComponent<Props> = ({ items, filter }) => {
+export const Slider: FunctionComponent<Props> = ({ items }) => {
   const classes = useStyles()
   const classesOne = useStylesOne()
-  const itemsFilters = useMemo(() => {
-    if (!filter) return items
-    if (filter == 'All') return items
-    return items.filter(item => item.category == filter)
-  }, [filter])
+
   return <Box p={5} className={classes.swiperContainer}>
     <Swiper
       effect={'coverflow'}
@@ -108,7 +103,7 @@ export const Slider: FunctionComponent<Props> = ({ items, filter }) => {
       pagination={true}
     >
       {
-        itemsFilters.map((item, key) => (
+        items.map((item, key) => (
           <SwiperSlide key={key} className={classesOne.swiperSlide}>
             <div className={classesOne.figure} style={{ backgroundImage: `url(/projects/${item.image})` }}>
               <div className={classesOne.caption}>

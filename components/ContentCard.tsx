@@ -3,6 +3,8 @@ import { FunctionComponent } from 'react'
 
 interface OwnProps {
   name: string
+  urlCode?: string
+  urlView?: string
   labels: string[]
 }
 
@@ -41,23 +43,23 @@ const useStyles = makeStyles(theme => ({
     }
   }
 }))
-export const ContentCard: FunctionComponent<Props> = ({ name, labels }) => {
+export const ContentCard: FunctionComponent<Props> = ({ name, urlCode, urlView, labels }) => {
   const classes = useStyles()
   return (
     <Grid container className={classes.root}>
       <Grid item xs={12} className={classes.contentChip}>
         {labels.map((label, key) => (<Chip key={key} className={classes.chip} variant='outlined' label={label} />))}
       </Grid>
-      <Grid item xs={6}>
+      <Grid item xs={urlView && urlView == 'N/A' ? 12 : 6}>
         <Box px={1}>
-          <Button color='inherit' fullWidth variant='outlined' href={`https://github.com/Miguelmorales13/${name}`} target='blank'>⛓ Code 🧰</Button>
+          <Button color='inherit' fullWidth variant='outlined' href={`${urlCode ?? 'https://github.com/Miguelmorales13/' + name}`} target='blank'>⛓ Code 🧰</Button>
         </Box>
       </Grid>
-      <Grid item xs={6}>
+      {urlView && urlView != 'N/A' && <Grid item xs={6}>
         <Box px={1}>
-          <Button color='inherit' fullWidth variant='outlined' href={`https://miguelmorales13.github.io/${name}/`} target='blank'>✨ View 🎈</Button>
+          <Button color='inherit' fullWidth variant='outlined' href={`${urlView ?? 'https://miguelmorales13.github.io/' + name}/`} target='blank'>✨ View 🎈</Button>
         </Box>
-      </Grid>
+      </Grid>}
     </Grid>
   )
 }
