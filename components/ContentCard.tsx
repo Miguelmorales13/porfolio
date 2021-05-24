@@ -55,7 +55,7 @@ export const ContentCard: FunctionComponent<Props> = ({ name, urlCode, urlView, 
           <Button color='inherit' fullWidth variant='outlined' href={`${urlCode ?? 'https://github.com/Miguelmorales13/' + name}`} target='blank'>⛓ Code 🧰</Button>
         </Box>
       </Grid>
-      {urlView && urlView != 'N/A' && <Grid item xs={6}>
+      {(!urlView || urlView != 'N/A') && <Grid item xs={6}>
         <Box px={1}>
           <Button color='inherit' fullWidth variant='outlined' href={`${urlView ?? 'https://miguelmorales13.github.io/' + name}/`} target='blank'>✨ View 🎈</Button>
         </Box>

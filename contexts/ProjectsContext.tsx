@@ -42,7 +42,17 @@ export const items: ItemSlider[] = [
     image: 'faker-generator.png',
     title: 'Faker Generator',
     category: 'Vue',
-    content: (<ContentCard name='fakerGenerator' urlView='N/A' labels={['Vue', 'Electron']} />)
+    content: (<ContentCard name='fakerGenerator' urlView='N/A' labels={['Vue', 'Electron', 'Bootstrap']} />)
+  }, {
+    image: 'e-commers-api.png',
+    title: 'E commers API',
+    category: 'Nodejs',
+    content: (<ContentCard name='e-commerse-api' urlView='https://e-commerse-api.herokuapp.com/api/' labels={['Nodejs', 'Typescript', 'Swagger', 'PostgreSQL', 'Sequelize', 'JWT']} />)
+  }, {
+    image: 'e-commers-admin.png',
+    title: 'E commers Management',
+    category: 'React',
+    content: (<ContentCard name='e-commers-admin' labels={['Nodejs', 'Typescript', 'Swagger', 'PostgreSQL', 'Sequelize', 'JWT']} />)
   }
 ]
 const ProjectsContext = createContext({
