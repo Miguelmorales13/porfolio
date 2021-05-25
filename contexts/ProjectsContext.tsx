@@ -44,12 +44,12 @@ export const items: ItemSlider[] = [
     category: 'Vue',
     content: (<ContentCard name='fakerGenerator' urlView='N/A' labels={['Vue', 'Electron', 'Bootstrap']} />)
   }, {
-    image: 'e-commers-api.png',
+    image: 'e-commers-api.PNG',
     title: 'E commers API',
     category: 'Nodejs',
     content: (<ContentCard name='e-commerse-api' urlView='https://e-commerse-api.herokuapp.com/api/' labels={['Nodejs', 'Typescript', 'Swagger', 'PostgreSQL', 'Sequelize', 'JWT']} />)
   }, {
-    image: 'e-commers-admin.png',
+    image: 'e-commers-admin.PNG',
     title: 'E commers Management',
     category: 'React',
     content: (<ContentCard name='e-commers-admin' labels={['Nodejs', 'Typescript', 'Swagger', 'PostgreSQL', 'Sequelize', 'JWT']} />)
