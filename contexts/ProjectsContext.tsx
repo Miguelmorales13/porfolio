@@ -53,6 +53,21 @@ export const items: ItemSlider[] = [
     title: 'E commers Management',
     category: 'React',
     content: (<ContentCard name='e-commers-admin' labels={['Nodejs', 'Typescript', 'Swagger', 'PostgreSQL', 'Sequelize', 'JWT']} />)
+  }, {
+    image: 'cli-fiber.PNG',
+    title: 'Cli for fiber',
+    category: 'Golang',
+    content: (<ContentCard name='ficli' urlView='N/A' labels={['Go', 'cobra', 'Gorm', 'Fiber']} />)
+  }, {
+    image: 'crud-golang.PNG',
+    title: 'Crud with go in fiber',
+    category: 'Golang',
+    content: (<ContentCard name='crud-fiber' urlView='N/A' labels={['Go', 'Fiber', 'Gorm', 'PostgreSQL', 'JWT', 'Swagger']} />)
+  }, {
+    image: 'e-commers-api-java.PNG',
+    title: 'Crud java Spring boot',
+    category: 'Java',
+    content: (<ContentCard name='e-commers-api-client' urlView='N/A' labels={['Java', 'Spring boot', 'PostgreSQL', 'JWT', 'Swagger', 'Freemarker', 'Docker']} />)
   }
 ]
 const ProjectsContext = createContext({
